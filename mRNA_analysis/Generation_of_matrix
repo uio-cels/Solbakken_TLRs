@@ -1,0 +1,95 @@
+module load trinityrnaseq #2.0.6
+module load samtools/1.1
+module load R #3.2.2
+export PATH=/cluster/software/INF_BIOX121_H15/R/R-3.2.2/bin:$PATH
+
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Final_short_nucseq_all_inc_pseudo.fas \
+--est_method RSEM \
+--aln_method bowtie \
+--prep_reference \
+
+#make sure your transcript file does not have any blank lines! If yes you will get errors claiming unknown char's and no .grp file will be made. 
+
+
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Index/Final_short_nucseq_all_inc_pseudo.fas \
+--seqType fq \
+--left /node/work1/no_backup/monica/trimmed_data/6hrs_HK1_K_R1_trimmed_paired.fastq \
+--right /node/work1/no_backup/monica/trimmed_data/6hrs_HK1_K_R2_trimmed_paired.fastq \
+--est_method RSEM \
+--thread_count 20 \
+--output_dir 6hrs_HK1 \
+--aln_method bowtie  \
+1>6hrs_HK1rsem_trimmed_default.out \
+2>6hrs_HK1rsem_trimmed_default.err 
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Index/Final_short_nucseq_all_inc_pseudo.fas \
+--seqType fq \
+--left /node/work1/no_backup/monica/trimmed_data/2day_HK1_K_R1_trimmed_paired.fastq \
+--right /node/work1/no_backup/monica/trimmed_data/2day_HK1_K_R2_trimmed_paired.fastq \
+--est_method RSEM \
+--thread_count 20 \
+--output_dir 2day_HK1 \
+--aln_method bowtie  \
+1>2day_HK1rsem_trimmed_default.out \
+2>2day_HK1rsem_trimmed_default.err 
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Index/Final_short_nucseq_all_inc_pseudo.fas \
+--seqType fq \
+--left /node/work1/no_backup/monica/trimmed_data/4day_HK1_K_R1_trimmed_paired.fastq \
+--right /node/work1/no_backup/monica/trimmed_data/4day_HK1_K_R2_trimmed_paired.fastq \
+--est_method RSEM \
+--thread_count 20 \
+--output_dir 4day_HK1 \
+--aln_method bowtie  \
+1>4day_HK1rsem_trimmed_default.out \
+2>4day_HK1rsem_trimmed_default.err 
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Index/Final_short_nucseq_all_inc_pseudo.fas \
+--seqType fq \
+--left /node/work1/no_backup/monica/trimmed_data/7day_HK1_K_R1_trimmed_paired.fastq \
+--right /node/work1/no_backup/monica/trimmed_data/7day_HK1_K_R2_trimmed_paired.fastq \
+--est_method RSEM \
+--thread_count 20 \
+--output_dir 7day_HK1 \
+--aln_method bowtie  \
+1>7day_HK1rsem_trimmed_default.out \
+2>7day_HK1rsem_trimmed_default.err 
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Index/Final_short_nucseq_all_inc_pseudo.fas \
+--seqType fq \
+--left /node/work1/no_backup/monica/trimmed_data/2day_HK2_K_R1_trimmed_paired.fastq \
+--right /node/work1/no_backup/monica/trimmed_data/2day_HK2_K_R2_trimmed_paired.fastq \
+--est_method RSEM \
+--thread_count 20 \
+--output_dir 2day_HK2 \
+--aln_method bowtie  \
+1>2day_HK2rsem_trimmed_default.out \
+2>2day_HK2rsem_trimmed_default.err 
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/align_and_estimate_abundance.pl \
+--transcripts Index/Final_short_nucseq_all_inc_pseudo.fas \
+--seqType fq \
+--left /node/work1/no_backup/monica/trimmed_data/4day_HK2_K_R1_trimmed_paired.fastq \
+--right /node/work1/no_backup/monica/trimmed_data/4day_HK2_K_R2_trimmed_paired.fastq \
+--est_method RSEM \
+--thread_count 20 \
+--output_dir 4day_HK2 \
+--aln_method bowtie  \
+1>4day_HK2rsem_trimmed_default.out \
+2>4day_HK2rsem_trimmed_default.err 
+
+
+
+/cluster/software/VERSIONS/trinityrnaseq/trinityrnaseq-2.0.6/util/abundance_estimates_to_matrix.pl \
+--est_method RSEM \
+--name_sample_by_basedir \
+--out_prefix mRNA_analysis_paper1 \
+6hrs_HK1/RSEM.genes.results 2day_HK1/RSEM.genes.results 4day_HK1/RSEM.genes.results 7day_HK1/RSEM.genes.results 2day_HK2/RSEM.genes.results 4day_HK2/RSEM.genes.results
