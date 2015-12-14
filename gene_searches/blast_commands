@@ -1,0 +1,70 @@
+
+tblastn -db 140828_celera_pb_pbjelly_pilon.fasta -query ~/Immunome/TLRs/Toll_cascade_cod2/cascade_all.fas -out ~/Immunome/TLRs/Toll_cascade_cod2/blastout_cascade_all_celera140828_pbjellypilon_aligns -outfmt 0 -num_descriptions 5 -num_alignments 5 -evalue 1e-1 -num_threads 10
+
+tblastn -db 140828_celera_pb_pbjelly_pilon.fasta -query ~/Immunome/TLRs/Toll_cascade_cod2/cascade_all.fas -out ~/Immunome/TLRs/Toll_cascade_cod2/blastout_cascade_all_celera140828_pbjellypilon_table -outfmt 6 -max_target_seqs 5 -evalue 1e-1 -num_threads 10
+
+module load blast
+
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR1_6_syntenic_genes.fas \
+-out blastout_TLR1_6_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR2_syntenic_genes.fas \
+-out blastout_TLR2_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR3_syntenic_genes.fas \
+-out blastout_TLR3_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR5_1_syntenic_genes.fas \
+-out blastout_TLR5_1_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR5_2_syntenic_genes.fas \
+-out blastout_TLR5_2_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR7_8_syntenic_genes.fas \
+-out blastout_TLR7_8_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR9_syntenic_genes.fas \
+-out blastout_TLR9_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR14_syntenic_genes.fas \
+-out blastout_TLR14_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR21_syntenic_genes.fas \
+-out blastout_TLR21_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR22_syntenic_genes.fas \
+-out blastout_TLR22_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+tblastn -db /node/work/olekto/final_asms/140828_celera_pb_pbjelly_pilon/databases/140828_celera_pb_pbjelly_pilon.fasta \
+-query TLR25_syntenic_genes.fas \
+-out blastout_TLR25_140828_celera_pb_pbjelly_pilon_120115 \
+-outfmt 6 -max_target_seqs 1 -evalue 1e-20  -num_threads 8
+
+
+tblastn -db 140828_celera_pb_pbjelly_pilon.fasta -query ~/Immunome/Other_PRRs/all.fas -out ~/Immunome/Other_PRRs/blastout_all_celera140828_pbjellypilon_aligns -outfmt 0 -num_descriptions 5 -num_alignments 5 -evalue 1e-1 -num_threads 10
+
+tblastn -db 140828_celera_pb_pbjelly_pilon.fasta -query ~/Immunome/Other_PRRs/all.fas -out ~/Immunome/Other_PRRs/blastout_all_celera140828_pbjellypilon_table -outfmt 6 -max_target_seqs 5 -evalue 1e-1 -num_threads 10
+
