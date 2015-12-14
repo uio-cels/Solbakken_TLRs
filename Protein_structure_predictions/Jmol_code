@@ -1,0 +1,152 @@
+##########################################################TLR8
+#alignment position vs structure alignment position
+#210 * this part is actually deleted from the structure. took the nearest amino acid. 
+
+
+set ambient 70
+color background white
+select all;color silver
+
+select structure=0;color silver
+
+select structure=2;color darkseagreen
+
+select structure=3;color lightblue
+
+# set style scheeme to cartoon if needed
+#go to display and uncheck perspective depth!
+
+
+
+#TLR8 sites:
+
+
+select 96; color blue
+
+select 210;color blue
+
+select 345; color blue
+
+select 587;color blue
+
+select 648; color blue
+
+select 802-1300; color gray #=TIR
+
+##########################################################TLR9
+
+set ambient 70
+color background white
+select all;color silver
+
+select structure=0;color silver
+
+select structure=2;color darkseagreen
+
+select structure=3;color lightblue
+
+# set style scheeme to cartoon if needed
+#go to display and uncheck perspective depth!
+
+
+
+#TLR9 sites:
+
+select 285; color blue
+
+select 452;color blue
+
+select 466; color blue
+
+select 690;color blue
+
+select 710; color blue
+
+select 753;color blue
+
+select 755; color blue
+
+select 774;color blue
+
+
+select 833-1300; color gray #=TIR
+
+
+##########################################################TLR22
+#alignment position vs structure alignment position
+#64=29
+#73=38
+#525=419
+#395=264
+#579=514
+#603=568
+#689=659
+
+# set style scheeme to cartoon if needed
+
+#go to display and uncheck perspective depth!
+
+select all;color silver
+
+select structure=0;color silver
+
+select structure=2;color darkseagreen
+
+select structure=3;color lightblue
+
+set ambient 70
+
+color background white
+
+
+#TLR22 sites:
+
+
+select 61; color red
+
+select 70;color chartreuse
+
+select 509;color red
+
+select 382; color blue
+
+select 562; color blue
+
+select 586; color blue
+
+select 672; color blue
+
+
+select 726-1300; color gray #=TIR
+
+
+
+##########################################################TLR25:
+
+select all;color silver
+
+select structure=0;color silver
+
+select structure=2;color darkseagreen
+
+select structure=3;color lightblue
+
+set ambient 70
+color background white
+
+
+# set style scheeme to cartoon if needed
+#go to display and uncheck perspective depth!
+
+
+
+#TLR25 sites:
+
+
+select 295; color blue
+
+select 335;color blue
+
+select 595-1300; color gray #=TIR
+
+
