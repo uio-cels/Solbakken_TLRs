@@ -1,42 +1,22 @@
 
 module load raxml
 
-
 #8.0.26
 
-
 raxmlHPC-PTHREADS \
-
 -s YDAFI_TIR_all_edit.fas \
-
 -n YDAFI_TIR_all_edit_RAxML_PROTCATJTT \
-
 -m PROTCATJTT \
-
 -f a \
-
 -x 136548 \
-
 -p 136548 \
-
 -# 500 \
-
 -T 20
 
-
 raxmlHPC \
-
 -f b \
-
 -t RAxML_bestTree.YDAFI_TIR_all_edit_RAxML_PROTCATJTT \
-
 -z RAxML_bootstrap.YDAFI_TIR_all_edit_RAxML_PROTCATJTT \
-
 -m PROTCATJTT \
-
 -s YDAFI_TIR_all_edit.fas \
-
 -n sum_YDAFI_TIR_all_edit_RAxML_PROTCATJTT 
-
-
-
