@@ -1,2 +1,2 @@
 # Solbakken_TLRs
-This repository contains all data used to generate the results in Solbakken et al: "Evolutionary redesign of the Atlantic cod (Gadus morhua L.) Toll-like receptor repertoire by gene losses and expansions" accepted for publication in Scientific Reports. 
+This repository contains all data used to generate the results in Solbakken et al: "Evolutionary redesign of the Atlantic cod (Gadus morhua L.) Toll-like receptor repertoire by gene losses and expansions" published in Scientific Reports 29th of April 2016. DOI: 10.1038/srep25211. ENA archive: ERP013973 RNA sequencing of the spleen / headkindey of 6 juvenile Atlantic cod (Gadus morhua) individuals.
